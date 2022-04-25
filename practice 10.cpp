@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -8,9 +9,9 @@ using namespace std;
 
 // setting up definitions for input
 const int CAP = 5;
-const string name[CAP];
-const string birthCity[CAP];
-int birthYr[CAP];
+ string name[CAP];
+ string birthCity[CAP];
+double birthYr[CAP];
 int sub;
 int allInfo = 1;
 
@@ -20,17 +21,22 @@ int main()
 
 {
 	//asking for information to input
-	cout << "Please give me the information of five family memebers, I will give you the information back.";
+	allInfo++;
+	cout << "Please give me the information of five family members,\n" 
+		"I will give you the information back.";
 	
-		cout << "Please enter the name of five family members. ";
-		cin >> name;
+		cout << "\nPlease enter the name of five family members.\n ";
+		for (int i = 0; i <= 5; i++)
+			cin.getline(cin, name);
 	
 
-			cout << "Please enter the birth city of five family members. ";
-			cin >> birthCity;
-
-			cout << "Please enter the birth year of five family members between 1900-2018. ";
-				cin >> birthYr;
+			cout << "\nPlease enter the birth city of five family members. \n";
+			for (int i = 0; i <= 5; i++)
+			cin.getline (cin, birthCity);
+			
+			cout << "\nPlease enter the birth year of five family members between 1900-2018.\n ";
+			for (int i = 0; i <= 5; i++)
+			cin.getline(cin,birthYr);
 
 //feeding information back out to the user
 
@@ -39,7 +45,7 @@ int main()
 					cout << "Name: " << name[sub] << endl;
 					cout << "Birth City: " << birthCity[sub] << endl;
 					cout << "Birth Year: " << birthYr[sub] << endl;
-}
+                 }
 
 
 
